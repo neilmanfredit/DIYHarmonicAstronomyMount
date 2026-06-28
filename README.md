@@ -156,8 +156,9 @@ The latitude adjustment base uses a **3/8"-16 UNC central stud**. The azimuth pl
 
 ## Licence
 
-MIT Licence — see [`LICENSE`](LICENSE). Free to use, modify, and build from.  
-If you build one, please share your results — open an issue or discussion.
+Copyright © Neil Manfred. Licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.  
+Commercial use and derivative works are not permitted without permission — see [`LICENSE`](LICENSE).  
+If you build one for personal use, please share your results — open an issue or discussion.
 
 ---
 
