@@ -1,0 +1,32 @@
+# OpenSCAD output files (generated — not source)
+*.stl
+*.amf
+*.3mf
+*.dxf
+*.csg
+*.png
+
+# Render cache
+.scad-render-cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+*.swp
+*~
+
+# Temporary files
+*.tmp
+*.bak
+
+# PlatformIO (if firmware ever moved here)
+.pio/
+.pioenvs/
+
+# Python cache (CI scripts)
+__pycache__/
+*.pyc

@@ -1,0 +1,66 @@
+name: Validate OpenSCAD Files
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'cad/**/*.scad'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'cad/**/*.scad'
+
+jobs:
+  validate-scad:
+    name: OpenSCAD Syntax Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install OpenSCAD
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y openscad
+
+      - name: Validate all SCAD files
+        run: |
+          set -e
+          FAILED=0
+          for f in $(find cad/ -name "*.scad"); do
+            echo "Checking: $f"
+            if openscad --check-parameters --check-parameter-ranges "$f" 2>&1 | grep -i error; then
+              echo "❌ FAILED: $f"
+              FAILED=1
+            else
+              echo "✅ OK: $f"
+            fi
+          done
+          if [ $FAILED -ne 0 ]; then
+            echo "One or more SCAD files failed validation."
+            exit 1
+          fi
+          echo "All SCAD files validated successfully."
+
+      - name: Render RA Front Plate to STL (smoke test)
+        run: |
+          openscad -o /tmp/RA_FrontPlate_test.stl cad/ra-axis/RA_FrontPlate.scad
+          echo "STL render: $(stat -c%s /tmp/RA_FrontPlate_test.stl) bytes"
+
+      - name: Render DEC Housing Plate to STL
+        run: |
+          openscad -o /tmp/DEC_HousingPlate_test.stl cad/dec-axis/DEC_HousingPlate.scad
+          echo "STL render: $(stat -c%s /tmp/DEC_HousingPlate_test.stl) bytes"
+
+      - name: Render Latitude Base Assembly to STL
+        run: |
+          openscad -o /tmp/LatBase_test.stl cad/latitude-base/LatBase_Assembly.scad
+          echo "STL render: $(stat -c%s /tmp/LatBase_test.stl) bytes"
+
+      - name: Upload rendered STLs as artefacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-stls
+          path: /tmp/*.stl
+          retention-days: 14

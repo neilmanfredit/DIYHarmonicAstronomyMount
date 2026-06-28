@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ============================================================
+  Harmonic EQ Mount — RA Front Plate
+  2D Machining Drawing (SVG / DXF-equivalent)
+  Scale: 1:2 (displayed), all dimensions in mm
+  Material: 6061-T6 Aluminium, 10mm thick
+  Finish: Natural / Anodise clear
+  Revision: 1.0 | Date: 2026-06
+  ============================================================
+  CONVERSION NOTE FOR MACHINIST:
+  Import this SVG into Inkscape → File → Save As → DXF (via
+  dxf_outlines extension) or use FreeCAD → import SVG →
+  export .dxf for your CAM software.
+  ============================================================
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 600 650"
+     width="600mm" height="650mm"
+     font-family="monospace" font-size="10">
+
+  <!-- Title block -->
+  <rect x="0" y="580" width="600" height="70" fill="none" stroke="black" stroke-width="1"/>
+  <text x="10" y="598" font-size="14" font-weight="bold">HARMONIC EQ MOUNT — RA FRONT PLATE</text>
+  <text x="10" y="614">Material: 6061-T6 Aluminium | Thickness: 10mm</text>
+  <text x="10" y="628">All dimensions in mm | Tolerances: General ±0.1mm | Bearing bores: H7</text>
+  <text x="10" y="642">Designer: Neil Manfred | Rev: 1.0 | 2026-06 | Scale 1:2</text>
+  <text x="450" y="598">PART NO:</text>
+  <text x="450" y="614">HEM-RA-001</text>
+  <text x="450" y="628">QTY: 1</text>
+
+  <!-- Outer plate boundary — 190 × 190mm scaled 1:2 = 95 × 95px (use 2px = 1mm) -->
+  <!-- Centre at 300, 280 -->
+
+  <!-- Plate outline with rounded corners (r=8mm → r=16px at 2:1) -->
+  <rect x="205" y="185" width="190" height="190" rx="16" ry="16"
+        fill="#f0f4ff" stroke="#000080" stroke-width="2"/>
+
+  <!-- Centrelines -->
+  <line x1="205" y1="280" x2="395" y2="280" stroke="red" stroke-width="0.5" stroke-dasharray="8,4"/>
+  <line x1="300" y1="185" x2="300" y2="375" stroke="red" stroke-width="0.5" stroke-dasharray="8,4"/>
+
+  <!-- Central bore — Ø30.5mm → r=30.5px at 2:1 -->
+  <circle cx="300" cy="280" r="30.5" fill="white" stroke="#333" stroke-width="1.5"/>
+  <text x="312" y="275" font-size="9" fill="#333">Ø30.5 THRU</text>
+  <text x="312" y="285" font-size="9" fill="#333">(CSF-17 boss)</text>
+
+  <!-- HD Output flange bolt circle — Ø63mm PCD → r=63px at 2:1 -->
+  <!-- 6× M4 clearance holes (Ø4.3mm → r=4.3px) at 60° spacing -->
+  <circle cx="300" cy="280" r="63" fill="none" stroke="#aaa" stroke-width="0.5" stroke-dasharray="4,3"/>
+  <text x="250" y="215" font-size="9" fill="#0060a0">PCD Ø63</text>
+
+  <!-- 6× M4 bolt holes on 63mm PCD -->
+  <circle cx="300" cy="217" r="4.3" fill="white" stroke="#0060a0" stroke-width="1.2"/>  <!-- 0° -->
+  <circle cx="354.5" cy="248.5" r="4.3" fill="white" stroke="#0060a0" stroke-width="1.2"/>  <!-- 60° -->
+  <circle cx="354.5" cy="311.5" r="4.3" fill="white" stroke="#0060a0" stroke-width="1.2"/>  <!-- 120° -->
+  <circle cx="300" cy="343" r="4.3" fill="white" stroke="#0060a0" stroke-width="1.2"/>  <!-- 180° -->
+  <circle cx="245.5" cy="311.5" r="4.3" fill="white" stroke="#0060a0" stroke-width="1.2"/>  <!-- 240° -->
+  <circle cx="245.5" cy="248.5" r="4.3" fill="white" stroke="#0060a0" stroke-width="1.2"/>  <!-- 300° -->
+
+  <text x="358" y="245" font-size="8" fill="#0060a0">6× M4</text>
+  <text x="358" y="254" font-size="8" fill="#0060a0">Ø4.3 THRU</text>
+
+  <!-- Motor mount — NEMA17 at X+75mm from centre → +150px -->
+  <!-- Motor centre at cx=450, cy=280 -->
+  <!-- Motor pilot bore Ø22.1mm → r=22.1px -->
+  <circle cx="450" cy="280" r="22.1" fill="white" stroke="#666" stroke-width="1.2"/>
+  <text x="455" y="278" font-size="8">Ø22.1</text>
+  <text x="455" y="287" font-size="8">NEMA17 boss</text>
+
+  <!-- NEMA17 bolt holes — 31mm PCD square → ±15.5mm → ±31px -->
+  <!-- Slotted 12mm in X direction for belt tension -->
+  <!-- Top-left -->
+  <rect x="411" y="256" width="16" height="8.6" rx="4.3" fill="white" stroke="#666" stroke-width="1"/>
+  <!-- Top-right -->
+  <rect x="472" y="256" width="16" height="8.6" rx="4.3" fill="white" stroke="#666" stroke-width="1"/>
+  <!-- Bottom-left -->
+  <rect x="411" y="295.4" width="16" height="8.6" rx="4.3" fill="white" stroke="#666" stroke-width="1"/>
+  <!-- Bottom-right -->
+  <rect x="472" y="295.4" width="16" height="8.6" rx="4.3" fill="white" stroke="#666" stroke-width="1"/>
+
+  <text x="390" y="258" font-size="8" fill="#666">4× M4</text>
+  <text x="390" y="267" font-size="8" fill="#666">SLOTTED</text>
+  <text x="390" y="276" font-size="8" fill="#666">12mm travel</text>
+
+  <!-- Motor centreline cross -->
+  <line x1="440" y1="280" x2="460" y2="280" stroke="red" stroke-width="0.4" stroke-dasharray="4,3"/>
+  <line x1="450" y1="270" x2="450" y2="290" stroke="red" stroke-width="0.4" stroke-dasharray="4,3"/>
+
+  <!-- Corner mounting holes — M5 clearance at 12mm inset from edges -->
+  <!-- Plate corners at ±95px from centre 300,280 → corners at 205+12=217, 375-12=363 -->
+  <circle cx="217" cy="197" r="5.5" fill="white" stroke="#006600" stroke-width="1"/>
+  <circle cx="383" cy="197" r="5.5" fill="white" stroke="#006600" stroke-width="1"/>
+  <circle cx="217" cy="363" r="5.5" fill="white" stroke="#006600" stroke-width="1"/>
+  <circle cx="383" cy="363" r="5.5" fill="white" stroke="#006600" stroke-width="1"/>
+  <text x="180" y="197" font-size="8" fill="#006600">M5</text>
+  <text x="180" y="207" font-size="8" fill="#006600">THRU ×4</text>
+
+  <!-- Cable slot at bottom -->
+  <rect x="285" y="367" width="30" height="12" rx="4" fill="white" stroke="#999" stroke-width="1"/>
+  <text x="240" y="376" font-size="8" fill="#999">15×12 cable slot</text>
+
+  <!-- Bearing pocket note (rear face) -->
+  <text x="210" y="310" font-size="9" fill="#8B0000">REAR FACE ONLY:</text>
+  <text x="210" y="322" font-size="9" fill="#8B0000">Ø32.05 H7 pocket</text>
+  <text x="210" y="334" font-size="9" fill="#8B0000">depth 9.5mm blind</text>
+  <text x="210" y="346" font-size="9" fill="#8B0000">(6002-2RS bearing)</text>
+
+  <!-- Overall dimension arrows -->
+  <line x1="205" y1="170" x2="395" y2="170" stroke="black" stroke-width="0.8" marker-end="url(#arrow)"/>
+  <text x="280" y="165" font-size="11" font-weight="bold">190</text>
+
+  <line x1="195" y1="185" x2="195" y2="375" stroke="black" stroke-width="0.8"/>
+  <text x="160" y="285" font-size="11" font-weight="bold" transform="rotate(-90,175,285)">190</text>
+
+  <!-- Legend -->
+  <rect x="10" y="100" width="190" height="130" fill="#fffff0" stroke="#ccc" stroke-width="0.5"/>
+  <text x="15" y="115" font-size="10" font-weight="bold">LEGEND</text>
+  <circle cx="25" cy="130" r="5" fill="white" stroke="#0060a0" stroke-width="1.5"/>
+  <text x="35" y="134" font-size="9">HD output bolt circle (M4 ×6)</text>
+  <circle cx="25" cy="150" r="5" fill="white" stroke="#666" stroke-width="1.5"/>
+  <text x="35" y="154" font-size="9">Motor mount / NEMA17</text>
+  <circle cx="25" cy="170" r="5" fill="white" stroke="#006600" stroke-width="1.5"/>
+  <text x="35" y="174" font-size="9">Corner fixing holes (M5)</text>
+  <circle cx="25" cy="190" r="5" fill="white" stroke="#333" stroke-width="1.5"/>
+  <text x="35" y="194" font-size="9">Central bore (CSF-17)</text>
+  <rect x="20" y="202" width="10" height="6" fill="#8B000022" stroke="#8B0000" stroke-width="1"/>
+  <text x="35" y="210" font-size="9">Rear face feature (blind)</text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+
+</svg>

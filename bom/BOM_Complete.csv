@@ -1,0 +1,40 @@
+Section,Item_No,Description,Specification,Source,URL_Search_Term,Est_Price_GBP_Low,Est_Price_GBP_High,Qty,Total_Low,Total_High,Notes
+Harmonic Drives,1,RA Harmonic Drive,CSF-17-100-2A-R 100:1 Size 17,eBay (surplus) or AliExpress,CSF-17-100 harmonic drive,80,150,1,80,150,"Measure bore/PCD before machining. Clone: SitoDrive CS-17-I"
+Harmonic Drives,2,DEC Harmonic Drive,CSF-14-100-2A-R 100:1 Size 14,eBay (surplus) or AliExpress,CSF-14-100 harmonic drive,60,120,1,60,120,"Measure bore/PCD before machining. Clone: SitoDrive CS-14-I"
+Stepper Motors,3,RA Stepper Motor,"NEMA17 42mm 40mm body 1.8deg 40Ncm 5mm shaft",AliExpress,NEMA 17 stepper 42-40 high torque,8,14,1,8,14,42HS40-1704 or equivalent
+Stepper Motors,4,DEC Stepper Motor,"NEMA17 42mm 40mm body 1.8deg 40Ncm 5mm shaft",AliExpress,NEMA 17 stepper 42-40 high torque,8,14,1,8,14,Buy identical to RA for interchangeability
+Electronics,5,Controller Board,FYSETC E4 ESP32 OnStep native,AliExpress,FYSETC E4 OnStep,25,35,1,25,35,Supports 4 TMC driver slots native WiFi
+Electronics,6,Stepper Drivers,TMC2209 UART SPI 2.8A peak,AliExpress,TMC2209 V3 stepper driver bigtreetech,4,7,4,16,28,Buy 4 (2 spare). BTT or MKS brand
+Electronics,7,RA Failsafe Brake,"12V NC electromagnetic brake NEMA17 compatible D22mm body",AliExpress,electromagnetic brake NEMA17 12V NC spring,18,30,1,18,30,Normally-Closed essential. Mounts on rear motor shaft
+Electronics,8,Power Supply,12V 5A DC switching PSU 60W,AliExpress / Amazon,12V 5A power supply DC switching,8,12,1,8,12,Or 24V 3A for higher torque margin
+Electronics,9,Relay Module 1ch,5V optocoupler relay for brake switching,AliExpress,5V relay module optocoupler,2,3,1,2,3,Protects ESP32 GPIO from brake coil inductance
+Electronics,10,Wiring Kit,"JST-XH 2.54mm connectors cable sleeving M-F",AliExpress,JST XH connector kit assortment,5,8,1,5,8,Full kit with crimping tool
+GT2 Belt Drive,11,Motor Pulley,GT2 16T 5mm bore 6mm belt width,AliExpress,GT2 16T pulley 5mm bore,1.5,2.5,2,3,5,Fits NEMA17 5mm shaft directly
+GT2 Belt Drive,12,Harmonic Input Pulley,GT2 48T 8mm bore 6mm belt width,AliExpress,GT2 48T pulley 8mm bore,2,4,2,4,8,3:1 ratio with 16T motor pulley. Match bore to harmonic input
+GT2 Belt Drive,13,GT2 Open Belt,6mm wide 2mm pitch open-ended,AliExpress,GT2 6mm open belt metre,3,5,1,3,5,Buy 1m — cut to length on assembly
+GT2 Belt Drive,14,Belt Tensioner Idler,GT2 20T smooth idler 5mm bore 6mm belt,AliExpress,GT2 smooth idler 5mm bore,1,2,2,2,4,For tensioning adjustment
+Aluminium Plate,15,6061-T6 Plate — RA Housing,200x200x10mm,metals4u.co.uk / eBay,6061 aluminium plate 200x200x10,12,18,2,24,36,Main RA axis housing plates
+Aluminium Plate,16,6061-T6 Plate — DEC Housing,160x160x10mm,metals4u.co.uk / eBay,6061 aluminium plate 160x160x10,8,14,2,16,28,DEC axis housing plates
+Aluminium Plate,17,6061-T6 Plate — Latitude Base,280x200x15mm,metals4u.co.uk / eBay,6061 aluminium plate 280x200x15,15,22,2,30,44,Azimuth and altitude plates (15mm for rigidity)
+Aluminium Plate,18,6061-T6 Plate — Hinge Brackets,80x60x20mm,metals4u.co.uk / eBay,6061 aluminium block 80x60x20,6,10,2,12,20,Hinge pivot blocks — machined from bar or block
+Aluminium Plate,19,6061-T6 Bar — Shafts,D40mm x 150mm,metals4u.co.uk,6061 aluminium round bar 40mm,10,16,1,10,16,Turned for RA/DEC shaft stubs
+Fasteners,20,M3 SHCS Assortment,"M3x8 M3x12 M3x16 M3x20 100pc",AliExpress / Amazon,M3 socket head cap screw stainless assortment,4,6,1,4,6,Grade 12.9 stainless preferred
+Fasteners,21,M4 SHCS Assortment,"M4x10 M4x16 M4x20 M4x25 100pc",AliExpress / Amazon,M4 socket head cap screw stainless assortment,4,6,1,4,6,
+Fasteners,22,M5 SHCS Assortment,"M5x16 M5x20 M5x30 50pc",AliExpress / Amazon,M5 socket head cap screw stainless,3,5,1,3,5,Structural plate fasteners
+Fasteners,23,M6 SHCS Assortment,"M6x16 M6x20 M6x30 50pc",AliExpress / Amazon,M6 socket head cap screw stainless,3,5,1,3,5,Latitude base and hinge fasteners
+Fasteners,24,M8 Hex Bolts and Nuts,"M8x40 M8x50 stainless 10pc",Local hardware,M8 hex bolt stainless steel,3,5,1,3,5,Latitude hinge pivot bolts
+Fasteners,25,Hex Nut and Washer Kit,"M3 M4 M5 M6 M8 assortment",AliExpress,hex nut washer assortment kit stainless,4,6,1,4,6,
+Fasteners,26,Threaded Insert 3/8-16 UNC,Stainless 3/8-16 UNC stud insert,Local hardware / AliExpress,3/8 16 UNC insert stainless,2,4,1,2,4,Tripod interface central stud
+Bearings,27,Angular Contact Bearings RA,"6002-2RS 15x32x9mm pair",AliExpress,6002RS angular contact bearing,3,6,2,6,12,Support RA output shaft
+Bearings,28,Angular Contact Bearings DEC,"6000-2RS 10x26x8mm pair",AliExpress,6000RS bearing,2,4,2,4,8,Support DEC output shaft
+Bearings,29,Latitude Base Pivot Bearing,"6205-2RS 25x52x15mm — main pivot",AliExpress,6205RS bearing,3,5,2,6,10,Latitude hinge pivot axis
+Bearings,30,Thrust Bearing — AZ trim,"F8-16M thrust bearing 8x16x5mm",AliExpress,F8-16M thrust bearing,1,2,1,1,2,Azimuth rotation under load
+Astronomy,31,Vixen Dovetail Saddle,Standard 45mm Vixen-style clamp saddle,AliExpress,Vixen dovetail saddle telescope,12,20,1,12,20,Fits both RVO 60ED and NexStar 8SE via Vixen bar
+Astronomy,32,Polar Alignment Scope,"1x polar scope D30mm illuminated reticle",AliExpress,polar alignment scope 30mm illuminated,12,20,1,12,20,Mounts into RA axis bore
+Latitude Base,33,Tangent Arm M8 Lead Screw,M8 threaded rod stainless 150mm,Local hardware,M8 stainless threaded rod,2,3,1,2,3,Altitude adjustment tangent arm drive
+Latitude Base,34,Altitude Knob,D50mm knurled knob M8 thread,AliExpress,knurled knob M8 D50mm,3,5,1,3,5,Large knob for easy field adjustment
+Latitude Base,35,Latitude Scale Strip,Laser engraved or printed 0-70deg scale,Local print / self-print,N/A,1,3,1,1,3,Printed on aluminium adhesive strip or engraved
+Counterweights,36,Counterweight Shaft,M12 stainless threaded rod 300mm,Local hardware,M12 stainless threaded rod 300mm,5,8,1,5,8,CW shaft
+Counterweights,37,Counterweights,"1kg x2 2kg x1 slip-on or screw-lock",AliExpress,telescope counterweight 1kg astronomy,8,15,1,8,15,Balance for NexStar 8SE load
+Optional,38,Raspberry Pi Zero 2W,KStars/INDI remote control,Pi Hut / Amazon,Raspberry Pi Zero 2W,15,18,1,15,18,Enables WiFi plate solving and sequencing
+Optional,39,AS5048A Encoder,Magnetic absolute encoder for PEC/closed-loop,AliExpress,AS5048A magnetic encoder,8,12,2,16,24,Future upgrade — closed-loop RA/DEC
