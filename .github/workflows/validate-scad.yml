@@ -3,12 +3,9 @@ name: Validate OpenSCAD Files
 on:
   push:
     branches: [ main, develop ]
-    paths:
-      - 'cad/**/*.scad'
   pull_request:
     branches: [ main ]
-    paths:
-      - 'cad/**/*.scad'
+  workflow_dispatch:
 
 jobs:
   validate-scad:
@@ -31,10 +28,10 @@ jobs:
           for f in $(find cad/ -name "*.scad"); do
             echo "Checking: $f"
             if openscad --check-parameters --check-parameter-ranges "$f" 2>&1 | grep -i error; then
-              echo "❌ FAILED: $f"
+              echo "FAILED: $f"
               FAILED=1
             else
-              echo "✅ OK: $f"
+              echo "OK: $f"
             fi
           done
           if [ $FAILED -ne 0 ]; then
@@ -43,7 +40,7 @@ jobs:
           fi
           echo "All SCAD files validated successfully."
 
-      - name: Render RA Front Plate to STL (smoke test)
+      - name: Render RA Front Plate to STL
         run: |
           openscad -o /tmp/RA_FrontPlate_test.stl cad/ra-axis/RA_FrontPlate.scad
           echo "STL render: $(stat -c%s /tmp/RA_FrontPlate_test.stl) bytes"
@@ -53,10 +50,10 @@ jobs:
           openscad -o /tmp/DEC_HousingPlate_test.stl cad/dec-axis/DEC_HousingPlate.scad
           echo "STL render: $(stat -c%s /tmp/DEC_HousingPlate_test.stl) bytes"
 
-      - name: Render Latitude Base Assembly to STL
+      - name: Render Mount Assembly Preview to STL
         run: |
-          openscad -o /tmp/LatBase_test.stl cad/latitude-base/LatBase_Assembly.scad
-          echo "STL render: $(stat -c%s /tmp/LatBase_test.stl) bytes"
+          openscad -o /tmp/MountAssembly_test.stl cad/assembly/MountAssembly_Preview.scad
+          echo "STL render: $(stat -c%s /tmp/MountAssembly_test.stl) bytes"
 
       - name: Upload rendered STLs as artefacts
         uses: actions/upload-artifact@v4
