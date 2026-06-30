@@ -23,13 +23,27 @@ A custom-built **Strain Wave (Harmonic Drive) German Equatorial Mount** designed
 
 ---
 
+## What It Looks Like
+
+A side-elevation schematic showing how all major assemblies stack together, from tripod to telescope:
+
+![HEM-001 assembly schematic](docs/images/assembly_schematic.svg)
+
+And a plan view of the latitude base on its own, showing the azimuth trim slots and hinge bracket layout before the tilting altitude plate and mount body go on top:
+
+![Latitude base plan view](docs/images/latitude_base_plan.svg)
+
+> These are orientation schematics, not manufacturing drawings — proportions are illustrative. For accurate dimensions, see the parametric `.scad` files in `cad/` and the 2D drawings in `cnc/`. Render your own STL previews from the `.scad` files (OpenSCAD → Render → Export) for a true-to-scale 3D view of each part.
+
+---
+
 ## Repository Structure
 
 ```
 hem-001/
 ├── README.md                    ← You are here
 ├── CHANGELOG.md                 ← Version history
-├── LICENSE                      ← MIT Licence
+├── LICENSE                      ← CC BY-NC-SA 4.0 Licence
 │
 ├── bom/
 │   ├── BOM_Complete.md          ← Full bill of materials (AliExpress/eBay sourcing)
@@ -47,12 +61,11 @@ hem-001/
 │   │   ├── LatBase_AzimuthPlate.scad    ← Bottom plate (tripod interface)
 │   │   ├── LatBase_AltitudePlate.scad   ← Upper tilting plate (mount body)
 │   │   ├── LatBase_HingeBracket.scad    ← Hinge pivot block (×2)
-│   │   ├── LatBase_TangentArmBlock.scad ← Tangent arm drive block
-│   │   └── LatBase_Assembly.scad        ← Full assembly preview
+│   │   └── LatBase_TangentArmBlock.scad ← Tangent arm drive block
 │   ├── tripod-interface/
 │   │   └── TripodAdapter_3_8.scad       ← 3/8"-16 tripod stud adapter
 │   └── assembly/
-│       └── MountAssembly_Preview.scad   ← Full mount assembly overview
+│       └── MountAssembly_Preview.scad   ← Full mount assembly preview
 │
 ├── cnc/
 │   ├── ra-axis/
@@ -79,7 +92,10 @@ hem-001/
 │   ├── BuildGuide.md            ← Step-by-step build sequence
 │   ├── TripodMounting.md        ← Tripod interface and latitude setup guide
 │   ├── Commissioning.md         ← OnStep setup, polar alignment, PEC
-│   └── PartsSourcing.md         ← Sourcing notes and clone gear guidance
+│   ├── PartsSourcing.md         ← Sourcing notes and clone gear guidance
+│   └── images/
+│       ├── assembly_schematic.svg     ← Side elevation — full mount visual reference
+│       └── latitude_base_plan.svg     ← Plan view — latitude base layout
 │
 └── .github/
     └── workflows/

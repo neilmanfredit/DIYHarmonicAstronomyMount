@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  HEM-001 — Full Assembly Schematic
+  Labelled side-elevation diagram showing how all major components
+  stack together, from tripod to telescope.
+  This is a schematic for orientation purposes — not to scale,
+  not for manufacturing. See cad/ for accurate parametric geometry.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 920" width="680" height="920" font-family="Arial, Helvetica, sans-serif">
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="680" height="920" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="340" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#0d1b3e">HEM-001 — Harmonic Drive EQ Mount</text>
+  <text x="340" y="56" text-anchor="middle" font-size="12" fill="#666">Side elevation schematic — tripod to telescope</text>
+
+  <!-- ============ TRIPOD ============ -->
+  <g>
+    <!-- Tripod legs (three, splayed) -->
+    <line x1="340" y1="850" x2="220" y2="900" stroke="#888" stroke-width="6" stroke-linecap="round"/>
+    <line x1="340" y1="850" x2="340" y2="905" stroke="#888" stroke-width="6" stroke-linecap="round"/>
+    <line x1="340" y1="850" x2="460" y2="900" stroke="#888" stroke-width="6" stroke-linecap="round"/>
+    <!-- Tripod head -->
+    <rect x="300" y="828" width="80" height="24" rx="4" fill="#999" stroke="#666" stroke-width="1"/>
+    <text x="490" y="845" font-size="12" fill="#444">Tripod (Sky-Watcher EQ5</text>
+    <text x="490" y="860" font-size="12" fill="#444">steel or equivalent)</text>
+    <line x1="380" y1="840" x2="485" y2="840" stroke="#aaa" stroke-width="0.75" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ AZIMUTH PLATE ============ -->
+  <g>
+    <rect x="260" y="800" width="160" height="22" rx="4" fill="#dce6f5" stroke="#0d1b3e" stroke-width="1.2"/>
+    <text x="340" y="815" text-anchor="middle" font-size="11" fill="#0d1b3e" font-weight="bold">Azimuth plate</text>
+    <text x="490" y="800" font-size="12" fill="#444">Azimuth plate (HEM-LAT-001)</text>
+    <text x="490" y="815" font-size="11" fill="#777">Fixed to tripod · ±8° AZ trim</text>
+    <line x1="420" y1="811" x2="485" y2="805" stroke="#aaa" stroke-width="0.75" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Hinge brackets -->
+  <g>
+    <rect x="265" y="772" width="20" height="28" fill="#b8c8e0" stroke="#0d1b3e" stroke-width="1"/>
+    <rect x="395" y="772" width="20" height="28" fill="#b8c8e0" stroke="#0d1b3e" stroke-width="1"/>
+    <text x="490" y="775" font-size="12" fill="#444">Hinge brackets (×2)</text>
+    <text x="490" y="790" font-size="11" fill="#777">HEM-LAT-003 · pivot axis</text>
+    <line x1="415" y1="786" x2="485" y2="780" stroke="#aaa" stroke-width="0.75" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ ALTITUDE PLATE (tilted at 53°) ============ -->
+  <g transform="rotate(-37 340 786)">
+    <rect x="260" y="700" width="160" height="20" rx="4" fill="#cdddf2" stroke="#0d1b3e" stroke-width="1.2"/>
+    <text x="340" y="714" text-anchor="middle" font-size="11" fill="#0d1b3e" font-weight="bold">Altitude plate (53° tilt)</text>
+  </g>
+  <text x="490" y="730" font-size="12" fill="#444">Altitude plate (HEM-LAT-002)</text>
+  <text x="490" y="745" font-size="11" fill="#777">Tilted to latitude · locks once set</text>
+  <line x1="430" y1="725" x2="485" y2="735" stroke="#aaa" stroke-width="0.75" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <!-- Tangent arm + knob -->
+  <g>
+    <line x1="280" y1="800" x2="280" y2="752" stroke="#888" stroke-width="3"/>
+    <circle cx="280" cy="745" r="9" fill="#c8a82c" stroke="#8a6d10" stroke-width="1"/>
+    <text x="150" y="748" text-anchor="end" font-size="11" fill="#777">Altitude knob</text>
+    <line x1="270" y1="745" x2="155" y2="745" stroke="#aaa" stroke-width="0.75" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ POLAR SPINE (tilted, follows altitude plate) ============ -->
+  <g transform="rotate(-37 340 786)">
+    <rect x="320" y="450" width="40" height="250" fill="#e4ebf6" stroke="#0d1b3e" stroke-width="1.2"/>
+    <text x="270" y="560" text-anchor="end" font-size="11" fill="#0d1b3e" font-weight="bold" transform="rotate(-90 270 560)">Polar axis spine</text>
+  </g>
+  <text x="490" y="560" font-size="12" fill="#444">Polar axis spine</text>
+  <text x="490" y="575" font-size="11" fill="#777">Main structural backbone</text>
+  <line x1="455" y1="555" x2="485" y2="565" stroke="#aaa" stroke-width="0.75" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <!-- ============ RA AXIS HOUSING ============ -->
+  <g transform="rotate(-37 340 786)">
+    <circle cx="340" cy="450" r="42" fill="#f3e6c2" stroke="#8a6d10" stroke-width="1.5"/>
+    <text x="340" y="446" text-anchor="middle" font-size="10" fill="#5a4708" font-weight="bold">RA axis</text>
+    <text x="340" y="458" text-anchor="middle" font-size="9" fill="#5a4708">CSF-17 · 300:1</text>
+    <!-- Motor block -->
+    <rect x="395" y="430" width="34" height="34" fill="#555" stroke="#333" stroke-width="1"/>
+    <text x="412" y="450" text-anchor="middle" font-size="8" fill="#fff">M</text>
+  </g>
+  <text x="490" y="445" font-size="12" fill="#444">RA axis housing</text>
+  <text x="490" y="460" font-size="11" fill="#777">Harmonic drive + NEMA17 + belt</text>
+  <line x1="455" y1="450" x2="485" y2="450" stroke="#aaa" stroke-width="0.75" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <!-- ============ DEC AXIS HOUSING ============ -->
+  <g transform="rotate(-37 340 786)">
+    <circle cx="340" cy="370" r="32" fill="#e6dcf3" stroke="#4a2e7a" stroke-width="1.5"/>
+    <text x="340" y="366" text-anchor="middle" font-size="10" fill="#3a2260" font-weight="bold">DEC axis</text>
+    <text x="340" y="378" text-anchor="middle" font-size="9" fill="#3a2260">CSF-14 · 300:1</text>
+  </g>
+  <text x="490" y="365" font-size="12" fill="#444">DEC axis housing</text>
+  <text x="490" y="380" font-size="11" fill="#777">Harmonic drive + Vixen saddle</text>
+  <line x1="455" y1="370" x2="485" y2="372" stroke="#aaa" stroke-width="0.75" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <!-- ============ VIXEN SADDLE + TELESCOPE ============ -->
+  <g transform="rotate(-37 340 786)">
+    <rect x="295" y="300" width="90" height="16" rx="3" fill="#d9d9d9" stroke="#555" stroke-width="1"/>
+    <text x="340" y="312" text-anchor="middle" font-size="9" fill="#333">Vixen saddle</text>
+    <!-- Telescope tube schematic -->
+    <ellipse cx="340" cy="220" rx="38" ry="80" fill="#dfe8f5" stroke="#0d1b3e" stroke-width="1.5"/>
+    <text x="340" y="200" text-anchor="middle" font-size="10" fill="#0d1b3e" font-weight="bold">NexStar 8SE</text>
+    <text x="340" y="214" text-anchor="middle" font-size="9" fill="#0d1b3e">or RVO 60ED</text>
+  </g>
+  <text x="490" y="230" font-size="12" fill="#444">Telescope OTA</text>
+  <text x="490" y="245" font-size="11" fill="#777">Up to 7.5kg fully rigged</text>
+  <line x1="400" y1="240" x2="485" y2="240" stroke="#aaa" stroke-width="0.75" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <!-- ============ COUNTERWEIGHT SHAFT + WEIGHTS ============ -->
+  <g transform="rotate(-37 340 786)">
+    <line x1="340" y1="450" x2="340" y2="640" stroke="#999" stroke-width="4"/>
+    <ellipse cx="340" cy="600" rx="26" ry="11" fill="#a8a8a8" stroke="#555" stroke-width="1"/>
+    <ellipse cx="340" cy="630" rx="26" ry="11" fill="#a8a8a8" stroke="#555" stroke-width="1"/>
+  </g>
+  <text x="150" y="610" text-anchor="end" font-size="12" fill="#444">Counterweight shaft</text>
+  <text x="150" y="625" text-anchor="end" font-size="11" fill="#777">M12 rod · 1-2kg weights</text>
+  <line x1="250" y1="615" x2="155" y2="615" stroke="#aaa" stroke-width="0.75" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <!-- ============ POLAR SCOPE ============ -->
+  <g transform="rotate(-37 340 786)">
+    <line x1="340" y1="408" x2="340" y2="385" stroke="#0d1b3e" stroke-width="3"/>
+  </g>
+  <text x="150" y="490" text-anchor="end" font-size="12" fill="#444">Polar alignment scope</text>
+  <text x="150" y="505" text-anchor="end" font-size="11" fill="#777">Through RA axis bore</text>
+  <line x1="260" y1="498" x2="155" y2="498" stroke="#aaa" stroke-width="0.75" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+  <!-- ============ LEGEND ============ -->
+  <g>
+    <rect x="40" y="100" width="180" height="120" fill="#fafafa" stroke="#ccc" stroke-width="0.5" rx="4"/>
+    <text x="50" y="120" font-size="11" font-weight="bold" fill="#0d1b3e">Legend</text>
+    <rect x="50" y="130" width="14" height="10" fill="#dce6f5" stroke="#0d1b3e" stroke-width="1"/>
+    <text x="70" y="139" font-size="10" fill="#444">Latitude base plates</text>
+    <rect x="50" y="148" width="14" height="10" fill="#f3e6c2" stroke="#8a6d10" stroke-width="1"/>
+    <text x="70" y="157" font-size="10" fill="#444">RA axis (harmonic)</text>
+    <rect x="50" y="166" width="14" height="10" fill="#e6dcf3" stroke="#4a2e7a" stroke-width="1"/>
+    <text x="70" y="175" font-size="10" fill="#444">DEC axis (harmonic)</text>
+    <rect x="50" y="184" width="14" height="10" fill="#dfe8f5" stroke="#0d1b3e" stroke-width="1"/>
+    <text x="70" y="193" font-size="10" fill="#444">Telescope OTA</text>
+    <rect x="50" y="202" width="14" height="10" fill="#a8a8a8" stroke="#555" stroke-width="1"/>
+    <text x="70" y="211" font-size="10" fill="#444">Counterweights</text>
+  </g>
+
+  <!-- Latitude angle annotation -->
+  <g>
+    <path d="M 340 786 L 340 720 A 66 66 0 0 1 300 727" fill="none" stroke="#c8a82c" stroke-width="1" stroke-dasharray="2,2"/>
+    <text x="305" y="765" font-size="10" fill="#8a6d10" font-weight="bold">53.41°</text>
+    <text x="305" y="778" font-size="9" fill="#8a6d10">(Stockport latitude)</text>
+  </g>
+
+  <!-- Footer note -->
+  <text x="340" y="900" text-anchor="middle" font-size="10" fill="#999">Schematic for orientation only — not to scale. See cad/ for accurate parametric models.</text>
+
+</svg>
